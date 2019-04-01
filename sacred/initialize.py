@@ -399,6 +399,9 @@ def create_run(experiment, command_name, config_updates=None,
     config = get_configuration(scaffolding)
     config_modifications = get_config_modifications(scaffolding)
 
+    # Apply the changes from the config hook retrieved in Phrase 3.
+    recursive_update(config, config_updates)
+
     # ----------------------------------------------------
 
     experiment_info = experiment.get_experiment_info()

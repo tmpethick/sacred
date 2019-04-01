@@ -50,6 +50,7 @@ class Run(object):
         """The logger that is used for this run"""
 
         self.main_function = main_function
+        self.main_function.config = self.config
         """The main function that is executed with this run"""
 
         self.observers = observers
